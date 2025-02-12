@@ -33,7 +33,7 @@ Buat file `config.json` di direktori utama dengan isi seperti ini:
 ### **4. Menjalankan Skrip**
 Jalankan dengan:
 ```bash
-python b.py
+python main.py
 ```
 Skrip akan secara otomatis:
 - Menggunakan semua akun `.session` yang tersedia.
