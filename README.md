@@ -27,7 +27,7 @@ Buat file `config.json` di direktori utama dengan isi seperti ini:
 - **File daftar channel dalam `channel/`** → Contoh isi `channel_list.txt`:
   ```
   https://t.me/channel1
-  https://t.me/channel2
+  channel2
   ```
 
 ### **4. Menjalankan Skrip**
