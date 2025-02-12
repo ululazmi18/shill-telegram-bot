@@ -41,3 +41,20 @@ Skrip akan secara otomatis:
 - Mengirim pesan sesuai jumlah yang diatur di `config.json`.
 
 ---
+
+| **No** | **Fungsi/Fitur**                  | **Penjelasan** |
+|-------|--------------------------------|-------------|
+| **1** | **Menggunakan semua file `.session`** | Skrip akan membaca semua file sesi yang ada di folder `sessions/` dan menggunakannya untuk mengirim pesan. |
+| **2** | **Mengambil `api_id` dan `api_hash` dari `config.json`** | Skrip tidak lagi meminta `api_id` dan `api_hash` dari `akun.txt`, melainkan langsung mengambil dari `config.json`. |
+| **3** | **Mengambil jumlah pesan (`JumlahPost`) dari `config.json`** | Skrip akan mengirim pesan sebanyak angka yang ada di `JumlahPost`. Jika tidak ada, defaultnya adalah **2**. |
+| **4** | **Memilih teks secara acak dari folder `text/`** | Setiap kali mengirim pesan, skrip akan memilih file `.txt` secara acak dari folder `text/` sebagai isi pesan. |
+| **5** | **Memilih media secara acak dari folder `media/`** | Skrip akan memilih satu file secara acak dari folder `media/` yang bisa berupa `.jpg` atau `.mp4`. |
+| **6** | **Menentukan jenis media secara otomatis** | Jika file media yang terpilih adalah `.jpg`, akan dikirim sebagai foto. Jika `.mp4`, akan dikirim sebagai video. |
+| **7** | **Memilih daftar channel secara acak dari folder `channel/`** | Skrip akan memilih satu file secara acak dari folder `channel/`, kemudian mengambil daftar channel dari file tersebut. |
+| **8** | **Menggunakan akun Telegram secara bersamaan** | Skrip akan menjalankan setiap akun `.session` dalam proses async, sehingga semua akun dapat mengirim pesan bersamaan. |
+| **9** | **Mengatasi `FloodWait` secara otomatis** | Jika ada batasan dari Telegram (FloodWait), skrip akan otomatis menunggu selama waktu yang diminta + 10 detik sebelum melanjutkan. |
+| **10** | **Melanjutkan ke pesan berikutnya jika ada kesalahan** | Jika pengiriman pesan gagal karena alasan lain (misalnya akun diblokir dari channel), skrip tidak akan berhenti, tetapi langsung lanjut ke pengiriman berikutnya. |
+| **11** | **Tidak mengulang pesan yang gagal** | Jika sebuah pesan gagal dikirim, skrip tidak akan mencoba mengulangnya, tetapi tetap lanjut ke jumlah pengiriman yang tersisa. |
+| **12** | **Menggunakan jeda acak antar pengiriman** | Skrip memberikan jeda acak antara **5-10 detik** antar pengiriman untuk menghindari deteksi spam oleh Telegram. |
+
+---
